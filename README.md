@@ -1,2 +1,35 @@
-# AbdullahSaad-AutoRecon
-Computer Engineering undergraduate with strong interest in **Cloud Computing**, **DevOps**, and system infrastructure. Solid understanding of Linux, networking fundamentals, and software development workflows. Comfortable with command‑line tools, version control, containerization (Docker), and automation tools.
+> It's like bowling with bumpers. – @ippsec
+
+# AutoRecon
+
+**Author:** Abdullah Saad (Computer Engineering undergrad, UET Taxila)  
+**GitHub:** [AbdullahSaad/AutoRecon](https://github.com/AbdullahSaad/AutoRecon)
+
+AutoRecon is a multi‑threaded network reconnaissance tool which performs automated enumeration of services. It is intended as a time‑saving tool for use in CTFs, penetration testing labs (e.g., OSCP), and real‑world engagements.
+
+The tool begins with port scans / service detection. From those results it launches further enumeration scans using a variety of tools (e.g., if HTTP is found, feroxbuster is launched).
+
+Everything is highly configurable. The default configuration performs **no automated exploitation** – keeping the tool safe for exams like OSCP.
+
+## Features
+
+- Multiple targets (IPs, CIDR, hostnames) – IPv6 ready.
+- Concurrent scanning across targets and processors.
+- Advanced plugin system (custom scans).
+- Global & per‑target pattern matching (highlights important info).
+- Intuitive directory structure: `exploit/`, `loot/`, `report/`, `scans/`.
+- Full logging of commands & errors.
+- Config file support, tagging system, timeouts, four verbosity levels.
+- Colorised output (can be disabled).
+
+## Installation (on Kali Linux)
+
+```bash
+sudo apt update && sudo apt install python3 python3-pip seclists
+sudo apt install curl dnsrecon enum4linux feroxbuster gobuster impacket-scripts nbtscan nikto nmap onesixtyone oscanner redis-tools smbclient smbmap snmp sslscan sipvicious tnscmd10g whatweb
+
+# Recommended: pipx
+sudo apt install python3-venv
+python3 -m pip install --user pipx
+python3 -m pipx ensurepath
+pipx install git+https://github.com/AbdullahSaad/AutoRecon.git
