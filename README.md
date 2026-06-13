@@ -42,7 +42,17 @@ pipx install git+https://github.com/AbdullahSaad/AutoRecon.git
 #!/usr/bin/python3
 # AutoRecon – network reconnaissance tool
 # Original work by Abdullah Saad (UET Taxila)
+### 2. `autorecon.py` (unchanged in code, but authorship comment added)
 
+```python
+#!/usr/bin/python3
+# AutoRecon – network reconnaissance tool
+# Original work by Abdullah Saad (UET Taxila)
+
+from autorecon.main import main
+
+if __name__ == '__main__':
+    main()
 from autorecon.main import main
 
 if __name__ == '__main__':
